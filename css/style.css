@@ -8,7 +8,13 @@ body {
 }
 
 .container {
-
+  background: rgb(255, 255, 255, .35);
+  width: 90%;
+  height: 600px;
+  padding: 20px;
+  border-radius: 15px;
 }
 
-.set1-group
+.set1-group {
+  display: block;
+}
