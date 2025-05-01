@@ -15,27 +15,44 @@ document.getElementById("city").addEventListener("change", function () {
   const city = this.value;
   const coords = cityCoordinates[city];
 
-  document.getElementById("city-title").textContent = selected
+  if (!coords) return;
+
+  document.getElementById("city-title").textContent = city
 
   const todayURL = `https://api.sunrisesunset.io/json?lat=${coords.lat}&lng=${coords.lng}&date=today`;
   fetch(todayURL)
-    .then(res => res.json())
+    .then(response => response.json())
     .then(data => updateDashboard(data.results, "today"))
-    .catch(err => console.error("Error fetching today:", err));
+    .catch(error => console.error("Error fetching today:", error));
 
   const tomorrowURL = `https://api.sunrisesunset.io/json?lat=${coords.lat}&lng=${coords.lng}&date=tomorrow`;
   fetch(tomorrowURL)
     .then(response => response.json())
     .then(data => updateDashboard(data.results, "tomorrow"))
-    .catch(error => console.error("Error fetching tomorrow:", error));
+    .catch(err => console.error("Error fetching tomorrow:", err));
 });
 
 function updateDashboard(data, prefix) {
-  document.querySelector(`#${prefix}-sunrise p:nth-of-type(1)`).innerHTML = data.sunrise;
-  document.querySelector(`#${prefix}-sunset p:nth-of-type(1)`).innerHTML = data.sunset;
-  document.querySelector(`#${prefix}-dawn p:nth-of-type(1)`).innerHTML = data.dawn;
-  document.querySelector(`#${prefix}-dusk p:nth-of-type(1)`).innerHTML = data.dusk;
-  document.querySelector(`#${prefix}-day-length p:nth-of-type(2)`).innerHTML = data.day_length;
-  document.querySelector(`#${prefix}-solar-noon p:nth-of-type(2)`).innerHTML = data.solar_noon;
-  document.querySelector(`#${prefix}-timezone p:nth-of-type(2)`).innerHTML = data.timezone;
+  document.getElementById(`${prefix}-sunrise`).children[1].textContent = data.sunrise;
+  document.getElementById(`${prefix}-sunset`).children[1].textContent = data.sunset;
+  document.getElementById(`${prefix}-dawn`).children[0].textContent = data.dawn;
+  document.getElementById(`${prefix}-dusk`).children[0].textContent = data.dusk;
+  document.getElementById(`${prefix}-day-length`).children[1].textContent = data.day_length;
+  document.getElementById(`${prefix}-solar-noon`).children[1].textContent = data.solar_noon;
+  document.getElementById(`${prefix}-timezone`).children[1].textContent = data.timezone;
 }
+
+function formatDate(date) {
+  return date.toLocaleDateString("en-US", {
+    weekday: "long", year: "numeric", month: "long", day: "numeric"
+  });
+}
+
+function updateDates() {
+  const today = new Date();
+  const tomorrow = new Date();
+  tomorrow.setDate(today.getDate() + 1);
+  document.getElementById("today-date").textContent = formatDate(today);
+  document.getElementById("tomorrow-date").textContent = formatDate(tomorrow);
+}
+updateDates();

@@ -40,8 +40,7 @@ body {
   height: 5vh;
 }
 
-.today-group,
-.tomorrow-group {
+.today-group, .tomorrow-group {
   align-items: center;
   justify-content: space-between;
   gap: 20px;
@@ -52,8 +51,7 @@ body {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.today-group h2,
-.tomorrow-group h2 {
+.today-group h2, .tomorrow-group h2 {
   font-size: 1.5em;
   margin-bottom: 5px;
   text-align: center;
@@ -76,8 +74,7 @@ body {
   grid-row-gap: 0px;
 }
 
-.set1,
-.set2 {
+.set1, .set2 {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(5, 1fr);
