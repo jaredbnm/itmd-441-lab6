@@ -5,6 +5,7 @@ body {
   min-height: 100vh;
   background: #A9DDD6;
   background: linear-gradient(37deg, rgba(169, 221, 214, 1) 0%, rgba(155, 160, 188, 1) 100%);
+  font-family: "Work Sans", sans-serif;
 }
 
 .container {
@@ -15,6 +16,104 @@ body {
   border-radius: 15px;
 }
 
-.set1-group {
-  display: block;
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header h1 {
+  font-size: 3em;
+  margin-left: 10px;
+  margin-bottom: 7px;
+  font-weight: 500;
+}
+
+.header select {
+  font-size: 1em;
+  margin-right: 10px;
+  height: 5vh;
+}
+
+.today-group,
+.tomorrow-group {
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+  height: 500px;
+  margin: 10px;
+  border-radius: 15px;
+}
+
+.today-group h2,
+.tomorrow-group h2 {
+  font-size: 1.5em;
+  text-align: center;
+  font-weight: 500;
+}
+
+.set1,
+.set2 {
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.today-group {
+  background-color: #c1b8c8;
+}
+
+.tomorrow-group {
+  background-color: #a1b8cc;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.set1,
+.set2 {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 10px;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+  
+.today-group { grid-area: 1 / 1 / 6 / 7; }
+.tomorrow-group { grid-area: 1 / 7 / 6 / 13; }
+.card1 { grid-area: 1 / 1 / 4 / 4; }
+.card2 { grid-area: 1 / 4 / 4 / 7; }
+.card3 { grid-area: 4 / 1 / 5 / 4; }
+.card4 { grid-area: 4 / 4 / 5 / 7; }
+.card5 { grid-area: 5 / 1 / 12 / 3; }
+.card6 { grid-area: 5 / 3 / 12 / 5; }
+.card7 { grid-area: 5 / 5 / 12 / 7; }
+
+.card8  { grid-area: 1 / 1 / 4 / 4; }
+.card9  { grid-area: 1 / 4 / 4 / 7; }
+.card10 { grid-area: 4 / 1 / 5 / 4; }
+.card11 { grid-area: 4 / 4 / 5 / 7; }
+.card12 { grid-area: 5 / 1 / 12 / 3; }
+.card13 { grid-area: 5 / 3 / 12 / 5; }
+.card14 { grid-area: 5 / 5 / 12 / 7; }
+
+.card1, .card2, .card3, .card4, .card5, .card6, .card7 {
+  background: white;
+  text-align: center;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.card8, .card9, .card10, .card11, .card12, .card13, .card14 {
+  background: white;
+  text-align: center;
+  padding: 20px;
+  border-radius: 5px;
 }

@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ITMD 441 Lab 6</title>
   <link rel="stylesheet" media="screen" href="css/meyers_and_normalize-form_reset.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
 </head>
+
 <body>
   <div class="container">
     <div class="header">
       <h1>Chicago</h1>
       <select name="city" id="city">
-        <option value="" disabled selected>Select a city</option>
+        <option value="" disabled selected>Select city</option>
         <option value="chicago">Chicago</option>
         <option value="nyc">New York City</option>
         <option value="san-francisco">San Francisco</option>
@@ -25,64 +31,80 @@
         <option value="Houston">Houston</option>
       </select>
     </div>
-    <div class="today-group">
-      <h2>Wednesday April 30th, 2025</h2>
-      <div class="set1-group">
-        <div class="sunrise">
-          <img width="25" height="25" src="https://img.icons8.com/ios/50/sunrise--v1.png" alt="sunrise--v1"/>
-          <p>time</p>
-          <p>Sunrise</p>
-        </div>
-        <div class="sunset">
-          <img width="25" height="25" src="https://img.icons8.com/ios/50/sunset--v1.png" alt="sunset--v1"/>
-          <p>time</p>
-          <p>Sunset</p>
-        </div>
-        <div class="dawn">
-          <p>time</p>
-          <p>Dawn</p>
-        </div>
-        <div class="dusk">
-          <p>time</p>
-          <p>Dusk</p>
+    <div class="grid">
+      <div class="today-group">
+        <h2>Wednesday April 30th, 2025</h2>
+        <div class="set1">
+          <div class="card1" id="today-sunrise">
+            <img width="50" height="50" src="https://img.icons8.com/ios/100/sunrise--v1.png" alt="sunrise--v1"/>
+            <p>time</p>
+            <p>Sunrise</p>
+          </div>
+          <div class="card2" id="today-sunset">
+            <img width="50" height="50" src="https://img.icons8.com/ios/100/sunset--v1.png" alt="sunset--v1"/>
+            <p>time</p>
+            <p>Sunset</p>
+          </div>
+          <div class="card3" id="today-dawn">
+            <p>time</p>
+            <p>Dawn</p>
+          </div>
+          <div class="card4" id="today-dusk">
+            <p>time</p>
+            <p>Dusk</p>
+          </div>
+          <div class="card5" id="today-day-length">
+            <p>time</p>
+            <p>Day Length</p>
+          </div>
+          <div class="card6" id="today-solar-noon">
+            <p>time</p>
+            <p>Solar Noon</p>
+          </div>
+          <div class="card7" id="today-timezone">
+            <p>time</p>
+            <p>Time Zone</p>
+          </div>
         </div>
       </div>
-      <div class="set2-group">
-        <div class="day-length">
-          <p>Day Length</p>
-        </div>
-        <div class="solar-noon">
-          <p>Solar Noon</p>
-        </div>
-        <div class="time-zone">
-          <p>Time Zone</p>
-        </div>
-      </div>
-    </div>
-    <div class="tomorrow-group">
-      <h2>Thursday May 1st, 2025</h2>
-      <div class="set1-group">
-        <div class="sunrise">
-          <img width="25" height="25" src="https://img.icons8.com/ios/50/sunrise--v1.png" alt="sunrise--v1"/>
-          <p>time</p>
-          <p>Sunrise</p>
-        </div>
-        <div class="sunset">
-          <img width="25" height="25" src="https://img.icons8.com/ios/50/sunset--v1.png" alt="sunset--v1"/>
-          <p>time</p>
-          <p>Sunset</p>
-        </div>
-        <div class="dawn">
-          <p>time</p>
-          <p>Dawn</p>
-        </div>
-        <div class="dusk">
-          <p>time</p>
-          <p>Dusk</p>
+      <div class="tomorrow-group">
+        <h2>Thursday May 1st, 2025</h2>
+        <div class="set2">
+          <div class="card8" id="tomorrow-sunrise">
+            <img width="50" height="50" src="https://img.icons8.com/ios/100/sunrise--v1.png" alt="sunrise--v1"/>
+            <p>time</p>
+            <p>Sunrise</p>
+          </div>
+          <div class="card9" id="tomorrow-sunset">
+            <img width="50" height="50" src="https://img.icons8.com/ios/100/sunset--v1.png" alt="sunset--v1"/>
+            <p>time</p>
+            <p>Sunset</p>
+          </div>
+          <div class="card10" id="tomorrow-dawn">
+            <p>time</p>
+            <p>Dawn</p>
+          </div>
+          <div class="card11" id="tomorrow-dusk">
+            <p>time</p>
+            <p>Dusk</p>
+          </div>
+          <div class="card12" id="tomorrow-day-length">
+            <p>time</p>
+            <p>Day Length</p>
+          </div>
+          <div class="card13" id="tomorrow-solar-noon">
+            <p>time</p>
+            <p>Solar Noon</p>
+          </div>
+          <div class="card14" id="tomorrow-timezone">
+            <p>time</p>
+            <p>Time Zone</p>
+          </div>
         </div>
       </div>
     </div>
   </div>
   <script src="script.js"></script>
 </body>
+
 </html>
