@@ -123,3 +123,13 @@ body {
 .card3 p, .card4 p, .card5 p, .card6 p, .card7 p, .card10 p, .card11 p, .card12 p, .card13 p, .card14 p {
   padding: 5px;
 }
+
+.API {
+  font-size: 0.6rem;
+  text-align: center;
+  margin: 20px;
+}
+
+a {
+  color: black;
+}

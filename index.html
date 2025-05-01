@@ -17,24 +17,24 @@
   <div class="container">
     <p class="lab">ITMD-441 Lab 6 - Jared Benman</p>
     <div class="header">
-      <h1 id="city-title">Chicago</h1>
+      <h1 id="city-title">Welcome</h1>
       <select name="city" id="city">
         <option value="" disabled selected>Select city</option>
-        <option value="chicago">Chicago</option>
-        <option value="nyc">New York City</option>
-        <option value="sanfrancisco">San Francisco</option>
-        <option value="miami">Miami</option>
-        <option value="seattle">Seattle</option>
-        <option value="atlanta">Atlanta</option>
-        <option value="detroit">Detroit</option>
-        <option value="philly">Philadelphia</option>
-        <option value="memphis">Memphis</option>
+        <option value="Chicago">Chicago</option>
+        <option value="New York City">New York City</option>
+        <option value="San Francisco">San Francisco</option>
+        <option value="Miami">Miami</option>
+        <option value="Seattle">Seattle</option>
+        <option value="Atlanta">Atlanta</option>
+        <option value="Detroit">Detroit</option>
+        <option value="Philadelphia">Philadelphia</option>
+        <option value="Memphis">Memphis</option>
         <option value="Houston">Houston</option>
       </select>
     </div>
     <div class="grid">
       <div class="today-group">
-        <h2>Wednesday April 30th, 2025</h2>
+        <h2 id="today-date">Wednesday April 30th, 2025</h2>
         <div class="set1">
           <div class="card1" id="today-sunrise">
             <img width="50" height="50" src="https://img.icons8.com/ios/100/sunrise--v1.png" alt="sunrise--v1"/>
@@ -43,7 +43,7 @@
           </div>
           <div class="card2" id="today-sunset">
             <img width="50" height="50" src="https://img.icons8.com/ios/100/sunset--v1.png" alt="sunset--v1"/>
-            <p>time</p>
+            <p></p>
             <p>Sunset</p>
           </div>
           <div class="card3" id="today-dawn">
@@ -71,7 +71,7 @@
         </div>
       </div>
       <div class="tomorrow-group">
-        <h2>Thursday May 1st, 2025</h2>
+        <h2 id="tomorrow-date">Thursday May 1st, 2025</h2>
         <div class="set2">
           <div class="card8" id="tomorrow-sunrise">
             <img width="50" height="50" src="https://img.icons8.com/ios/100/sunrise--v1.png" alt="sunrise--v1"/>
@@ -109,8 +109,9 @@
         </div>
       </div>
     </div>
+    <p class="API"><a href="https://sunrisesunset.io">SunriseSunset API Documentation</a></p>
   </div>
-  <script src="script.js"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
