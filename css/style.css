@@ -11,10 +11,16 @@ body {
 .container {
   background: rgb(255, 255, 255, .35);
   width: 90%;
-  height: 600px;
+  height: 620px;
   padding: 20px;
   border-radius: 15px;
+  box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.185);
 }
+
+.lab {
+  font-size: 0.8em;
+  margin-bottom: 5px;
+} 
 
 .header {
   display: flex;
@@ -43,20 +49,15 @@ body {
   height: 500px;
   margin: 10px;
   border-radius: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .today-group h2,
 .tomorrow-group h2 {
   font-size: 1.5em;
+  margin-bottom: 5px;
   text-align: center;
   font-weight: 500;
-}
-
-.set1,
-.set2 {
-  padding: 20px;
-  border-radius: 10px;
-  margin-bottom: 20px;
 }
 
 .today-group {
@@ -81,9 +82,9 @@ body {
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(5, 1fr);
   gap: 10px;
-  padding: 20px;
-  border-radius: 10px;
-  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255, 0.2);
 }
   
 .today-group { grid-area: 1 / 1 / 6 / 7; }
@@ -104,16 +105,21 @@ body {
 .card13 { grid-area: 5 / 3 / 12 / 5; }
 .card14 { grid-area: 5 / 5 / 12 / 7; }
 
-.card1, .card2, .card3, .card4, .card5, .card6, .card7 {
+.card1, .card2, .card3, .card4, .card5, .card6, .card7, .card8, .card9, .card10, .card11, .card12, .card13, .card14 {
   background: white;
   text-align: center;
-  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
   border-radius: 5px;
 }
 
-.card8, .card9, .card10, .card11, .card12, .card13, .card14 {
-  background: white;
-  text-align: center;
-  padding: 20px;
-  border-radius: 5px;
+.card1 p, img, .card2 p, img, .card8 p, img, .card9 p, img {
+  padding: 10px;
+}
+
+.card3 p, .card4 p, .card5 p, .card6 p, .card7 p, .card10 p, .card11 p, .card12 p, .card13 p, .card14 p {
+  padding: 5px;
 }
